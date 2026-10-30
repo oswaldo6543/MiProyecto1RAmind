@@ -20,7 +20,7 @@
 <body>
   <div id="aviso">Autoriza la cámara y apunta al target</div>
   <a-scene
-    mindar-image="imageTargetSrc: /MiProyecto1RAMind/target.mind;"
+    mindar-image="imageTargetSrc: ./target.mind;"
     color-space="sRGB"
     renderer="colorManagement: true;"
     vr-mode-ui="enabled: false"
@@ -28,13 +28,13 @@
     
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     
-    <!-- Entidad que se mostrará al detectar la imagen target con tu modelo .dae -->
+    <!-- Entidad que se mostrará al detectar la imagen target con tu modelo .glb -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-entity collada-model="./cube.glb" 
-                position="0 0 0" 
-                scale="0.5 0.5 0.5" 
-                rotation="0 0 0">
-      </a-entity>
+      <a-gltf-model src="./cube.glb" 
+                    position="0 0 0" 
+                    scale="0.5 0.5 0.5" 
+                    rotation="0 0 0">
+      </a-gltf-model>
     </a-entity>
   </a-scene>
 </body>
